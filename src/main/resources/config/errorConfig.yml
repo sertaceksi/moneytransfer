@@ -1,0 +1,58 @@
+error-config:
+  errorMessages:
+    MSG_CODE_1:
+      error:
+        code: MSG_CODE_1
+        description: Mandatory parameters are not provided in the request
+        cause: Missing mandatory parameters
+        resolution: Please provide all required parameters and try again
+      statusCode: 400
+    MSG_CODE_2:
+      error:
+        code: MSG_CODE_2
+        description: Authorisation failure
+        cause: Incorrect, invalid or missing security credentials provided in API request
+        resolution: Please re-submit your API request with the correct security credentials
+      statusCode: 401
+    MSG_CODE_3:
+      error:
+        code: MSG_CODE_3
+        description: Internal Server error occurred
+        cause: An internal error occurred while processing the request
+        resolution: Please check the request and try after sometime
+      statusCode: 500
+    MSG_CODE_4:
+      error:
+        code: MSG_CODE_4
+        description: System error. if this continues, please call the customer service
+        cause: An internal error was identified while attempting to process your API request
+        resolution: Please try again later
+      statusCode: 503
+    MSG_CODE_5:
+      error:
+        code: MSG_CODE_5
+        description: Insufficient balance for this transaction
+        cause: Insufficient balance
+        resolution: Please make deposit and try again
+      statusCode: 400
+    MSG_CODE_6:
+      error:
+        code: MSG_CODE_6
+        description: Each accounts that provided for a transaction mush have same currency
+        cause: Mismatched currency in accounts
+        resolution: Please provide two accounts with same currency
+      statusCode: 400
+    MSG_CODE_7:
+      error:
+        code: MSG_CODE_7
+        description: Transaction to the same account is not allowed
+        cause: Transaction between same accounts
+        resolution: Please provide two different accounts and try again
+      statusCode: 400
+    MSG_CODE_8:
+      error:
+        code: MSG_CODE_8
+        description: Account not found
+        cause: Account not found
+        resolution: Please provide valid account number and try again
+      statusCode: 404

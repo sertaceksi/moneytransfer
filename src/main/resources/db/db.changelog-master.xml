@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+    <changeSet id="1" author="admin">
+        <sqlFile path="classpath:db/sql/01-init-db.sql"
+                 splitStatements="false"
+                 stripComments="false"
+                 endDelimiter=";"
+        />
+    </changeSet>
+    <changeSet id="2" author="admin">
+        <sqlFile path="classpath:db/sql/02-add-column-amount-to-account.sql"
+                 splitStatements="false"
+                 stripComments="false"
+                 endDelimiter=";"
+        />
+    </changeSet>
+
+    <changeSet id="3" author="admin">
+        <sqlFile path="classpath:db/sql/03-update-account.sql"
+                 splitStatements="false"
+                 stripComments="false"
+                 endDelimiter=";"
+        />
+    </changeSet>
+
+    <changeSet id="4" author="admin">
+        <sqlFile path="classpath:db/sql/04-insert-records.sql"
+                 splitStatements="false"
+                 stripComments="false"
+                 endDelimiter=";"
+        />
+    </changeSet>
+
+</databaseChangeLog>
