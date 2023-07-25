@@ -11,6 +11,9 @@ public class YmlPropertySourceFactory implements PropertySourceFactory {
 
     @Override
     public PropertySource<?> createPropertySource(String name, EncodedResource resource) throws IOException {
+        if (resource == null) {
+            throw new IllegalArgumentException("Resource must not be null");
+        }
         if (name == null) {
             name = resource.getResource().getFilename();
         }
